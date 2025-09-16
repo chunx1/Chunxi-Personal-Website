@@ -22,6 +22,41 @@ body {
     animation: gradientShift 8s ease-in-out infinite;
 }
 
+.navigation {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes gradientShift {
     0% {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -155,5 +190,18 @@ p {
 
     .about-section, .contact-section {
         padding: 3rem 0;
+    }
+
+    .navigation {
+        top: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-menu li a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
     }
 }
